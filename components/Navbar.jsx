@@ -27,33 +27,36 @@ const MENU_LIST = [
 
 const Navbar = () => {
   return (
-    <header>
-        <nav className='nav'>
-            <Link href={"/"}>
-                <h1 className='logo'>HeatHelp</h1>
-            </Link>
+      <header>
+          <nav className='nav'>
+              <Link href={"/"} legacyBehavior>
+                <a>
+                  <h1 className='logo'>HeatHelp</h1>
 
-            <div className="nav__menu-bar">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+                </a>
+              </Link>
 
-            <div className="nav__menu-list">
-                {
-                    MENU_LIST.map((menu, idx) => {
-                        return <div key={menu.text}>
-                            <NavItem {...menu} />
-                        </div>
-                    })
-                }
+              <div className="nav__menu-bar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+              </div>
 
-            </div>
-        </nav>
-    </header>
-  )
+              <div className="nav__menu-list">
+                  {
+                      MENU_LIST.map((menu, idx) => {
+                          return <div key={menu.text}>
+                              <NavItem {...menu} />
+                          </div>
+                      })
+                  }
+
+              </div>
+          </nav>
+      </header>
+  );
 }
 
 export default Navbar

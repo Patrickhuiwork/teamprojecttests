@@ -1,10 +1,14 @@
-import Link from 'next/link';
-import React from 'react';
-
-const NavItem = ({ title, href, active }) => {
+import Link from "next/link";
+const NavItem = ({ text, href, active }) => {
   return (
     <Link href={href}>
-      <a className={`nav__item ${active ? 'active' : ''}`}>{title}</a>
+      <a
+        className={`nav__item ${
+          active ? "active" : ""
+        }`}
+      >
+        {text}
+      </a>
     </Link>
   );
 };
